@@ -1,0 +1,24 @@
+@mixin padding($value) {
+    padding: $value;
+}
+
+@mixin title{
+    .title{
+        span{
+            color: $primary-color-4;
+            font-size: 18px;
+        }
+        h2{
+            color: #2b5a94;
+            font-weight: 600;
+        }
+    }
+}
+
+@mixin animate ( $attr, $time, $trans){
+    -webkit-transition: $attr $time $trans;
+    -moz-transition: $attr $time $trans;
+    -ms-transition: $attr $time $trans;
+    -o-transition: $attr $time $trans;
+    transition: $attr $time $trans;
+}
