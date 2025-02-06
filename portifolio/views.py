@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import EmailForm
 from .models import Email, Category, Portifolio
 from django.views import View
+from loguru import logger
 
 class Index(View):
     form_class = EmailForm
@@ -22,6 +23,6 @@ class Index(View):
             form.save()
             return render(request, self.template_name, {'form': form, 'projects':self.projects}) 
         else:
-            print('failed') 
+            logger.info('failed to save the form')
 
         return render(request, self.template_name, {'form': form, 'projects':self.projects})  

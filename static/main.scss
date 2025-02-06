@@ -4,6 +4,9 @@
 
 *{
     font-family: 'Poppins', sans-serif;
+    a{
+        text-decoration: none;
+    }
 }    
 .social-media {
     position: fixed;
@@ -29,14 +32,14 @@
     }
 }
 .cover-page{
-    @include padding(80px);
+    // @include padding(80px);
     height: 100vh;
     .page-btn{
         width: 80%;
         background: $primary-color-2;
         color: $primary-color-4;
         border-color:$primary-color-1;
-        border:none;
+        border:1px solid #f1f4fb;
         border-radius: 0.5rem;
         box-shadow: $shadow;
         padding: 0.50rem;
