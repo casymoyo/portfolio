@@ -1,0 +1,18 @@
+{% for article in articles %}
+    <article class="bg-white rounded-lg shadow-md overflow-hidden mt-5">
+        {% if article.featured_image %}
+        <img src="{{ article.featured_image.url }}" alt="{{ article.title }}" class="w-full h-48 object-cover">
+        {% endif %}
+        <div class="p-6">
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="{{ article.get_absolute_url }}" class="text-gray-900 hover:text-blue-600">
+                    {{ article.title }}
+                </a>
+            </h2>
+            <div class="text-gray-600 text-sm mb-4">
+                {{ article.created_at|date:"F j, Y" }} • {{ article.author.get_full_name }}
+            </div>
+            <p class="text-gray-700">{{ article.content|truncatewords:30 }}</p>
+        </div>
+    </article>
+{% endfor %}

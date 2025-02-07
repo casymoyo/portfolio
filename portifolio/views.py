@@ -10,6 +10,8 @@ class Index(View):
     template_name = 'index.html'
     projects = Portifolio.objects.all()
 
+    logger.info(f'Projects: {projects}')
+
     def get(self, request, *args, **kwargs):
         form = self.form_class(initial=self.initial)
         print(self.projects)

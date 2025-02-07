@@ -270,4 +270,8 @@
 }
 .footer-content .social-media-footer a:hover {
   background-color: #222;
+}
+
+#project-details {
+  transition: opacity 0.3s ease-in-out;
 }/*# sourceMappingURL=main.css.map */
